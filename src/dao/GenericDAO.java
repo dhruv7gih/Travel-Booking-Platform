@@ -1,0 +1,17 @@
+package dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+public interface GenericDAO<T> {
+
+    T findById(int id) throws SQLException;
+
+    List<T> findAll() throws SQLException;
+
+    boolean insert(T obj) throws SQLException;
+
+    boolean update(T obj) throws SQLException;
+
+    boolean delete(int id) throws SQLException;
+}
